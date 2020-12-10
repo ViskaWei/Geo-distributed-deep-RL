@@ -1,0 +1,16 @@
+{
+    "in": "./data/bki",
+    "nImg": 1,
+    "test":false,
+    "smooth": 2.0,
+    "dtype":"uint64",
+    "topk":0.4,
+    "sci": false,
+    "cutoff": "./home/swei20/cancerHH/AceCanZ/runs/test/cutoff.txt", 
+    "saveMat": false,
+    "saveMask": true,
+    "maskId": 26
+    
+}
+
+
