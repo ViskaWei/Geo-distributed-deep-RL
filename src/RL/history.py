@@ -8,6 +8,7 @@ import numpy as np
 from collections import deque
 from six.moves import range
 from tensorpack.RL.envbase import ProxyPlayer
+from src.sketch.SnS import SnS
 
 __all__ = ['HistoryFramePlayer']
 
@@ -82,3 +83,12 @@ class HistoryFramePlayer(ProxyPlayer):
         super(HistoryFramePlayer, self).restart_episode()
         self.history.clear()
         self.history.push(self.player.current_state())
+
+    def sketch_history(self):
+        base = 20
+        sns = SnS(self.history, base)
+        sns.prepare()
+        sns.run
+        print(sns.dfHH)
+        self.save_data(sns.dfHH, "dfHH", "csv") 
+        return sns.dfHH
